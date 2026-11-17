@@ -11,13 +11,24 @@ Content-Type: application/json
     "dob" : "1994-07-17"
 }
 
+#=====token=======
+
+###
+POST http://127.0.0.1:8000/token/
+Content-Type: application/json
+
+{
+    "username" : "django",
+    "password"  : "password@123"
+}
+
 #======================expenses===============
 
 #api call for list expense of user
 ###
 GET http://127.0.0.1:8000/expenses/
 Accept: application/json
-Authorization: Basic django:password@123
+Authorization:Token 44f17add232a26a1515d64459486cb474d8a0e05
 
 #api call for create expense
 ###
@@ -26,8 +37,9 @@ Content-Type: application/json
 Authorization: Basic django:password@123
 
 {
-    "title" : "travel",
-    "amount" : 1000
+    "title" : "fuel_car",
+    "amount" : 2000,
+    "category" : "fuel"
     
 }
 
@@ -59,3 +71,9 @@ Authorization: Basic django:password@123
 ###
 DELETE http://127.0.0.1:8000/expenses/2/
 Authorization: Basic react:password@123
+
+#=====summary=======
+###
+GET http://127.0.0.1:8000/expenses/summary/
+Accept: application/json
+Authorization: Basic django:password@123
