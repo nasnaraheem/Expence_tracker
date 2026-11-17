@@ -34,7 +34,7 @@ Authorization:Token 44f17add232a26a1515d64459486cb474d8a0e05
 ###
 POST http://127.0.0.1:8000/expenses/
 Content-Type: application/json
-Authorization: Basic django:password@123
+Authorization: Token 44f17add232a26a1515d64459486cb474d8a0e05
 
 {
     "title" : "fuel_car",
@@ -47,13 +47,13 @@ Authorization: Basic django:password@123
 ###
 GET http://127.0.0.1:8000/expenses/1/
 Accept: application/json
-Authorization: Basic django:password@123
+Authorization: Token 44f17add232a26a1515d64459486cb474d8a0e05
 
 #api call for update 
 ###
 PUT http://127.0.0.1:8000/expenses/1/
 Content-Type: application/json
-Authorization: Basic django:password@123
+Authorization:Token 44f17add232a26a1515d64459486cb474d8a0e05
 
 {
   "id": 1,
@@ -70,10 +70,10 @@ Authorization: Basic django:password@123
 #api call for delete
 ###
 DELETE http://127.0.0.1:8000/expenses/2/
-Authorization: Basic react:password@123
+Authorization: Token 44f17add232a26a1515d64459486cb474d8a0e05
 
 #=====summary=======
 ###
 GET http://127.0.0.1:8000/expenses/summary/
 Accept: application/json
-Authorization: Basic django:password@123
+Authorization: Token 44f17add232a26a1515d64459486cb474d8a0e05
